@@ -85,7 +85,7 @@
         <div class="section-header">
           <h3>Contact Us</h3>
         </div>
-
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="955" height="558" id="gmap_canvas" src="https://maps.google.com/maps?q=Tapo%20Commercial%20Complex%2C%20Ram%20Mandir%20Road%2C%20Goregaon%20(West)%2C%20Mumbai%20-%20400104&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>Werbung: <a href="https://www.pureblack.de">pureblack.de</a></div><style>.mapouter{position:relative;text-align:right;height:558px;width:955px;}.gmap_canvas {overflow:hidden;background:none!important;height:558px;width:955px;}</style></div>
         <div class="row contact-info">
 
           <div class="col-md-4">
@@ -116,7 +116,7 @@
 
         </div>
 
-       <div class="form" style="background: #f2f2f2">
+    <!--   <div class="form" style="background: #f2f2f2">
           <div id="sendmessage">Your message has been sent. Thank you!</div>
           <div id="errormessage"></div>
    <form method="post" action="send_mail.php">
@@ -139,7 +139,7 @@
 <label><input type="checkbox" name="checkbox[]" value="A3">A1</label>
 
 <label><input type="checkbox" name="checkbox[]" value="A4">A1</label>
-</div><!--where is the php file? -->
+</div>
 <center><div class="col-md-12">
 <label>Message
 <textarea name="comments" maxlength="500" style="border-radius: 5px; width: 100%;"></textarea>
@@ -147,11 +147,10 @@
 <center><p><button>Submit the form</button></p></center>
 </div></center>
 </form>
-        </div>
-        <!--<div class="form">
-          <div id="sendmessage">Your message has been sent. Thank you!</div>
-          <div id="errormessage"></div>
-          <form action="" method="post" role="form" class="contactForm" action="send_mail.php">
+        </div>-->
+        
+        <div class="form">
+          <form role="form" class="contactForm" action="send_mail.php">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <input type="text" name="first_name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -166,15 +165,39 @@
               <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
               <div class="validation"></div>
             </div>
+            <div >
+              <label><input type="checkbox" name="checkbox[]" value="A1">A1</label>
+              <label><input type="checkbox" name="checkbox[]" value="A2">A1</label>
+              <label><input type="checkbox" name="checkbox[]" value="A3">A1</label>
+              <label><input type="checkbox" name="checkbox[]" value="A4">A1</label>
+            </div>
             <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <input type="text" class="form-control" name="phone_no" id="phone_no" placeholder="Phone No." data-rule="minlen:4" data-msg="Please enter Number" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="comments" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
               <div class="validation"></div>
             </div>
             <div class="text-center"><button type="submit">Send Message</button></div>
           </form>
-        </div>-->
+        </div>
       </div>
+      
 
+      <style>
+        @media only screen and (min-device-width: 300px) {
+         .section-header { 
+             padding-top: 25%;
+          }
+        }
+         @media only screen and (min-device-width: 1444px) {
+          .section-header { 
+             padding-top: 10%;
+             padding-bottom: 50px;
+          }
+        }
+        </style>
     </section><!-- #contact -->
       
 </main>

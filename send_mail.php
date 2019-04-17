@@ -19,28 +19,29 @@ If you add a form field, you will need to add it here.
 */
 $email_address = $_REQUEST['email_address'] ;
 $comments = $_REQUEST['comments'] ;
+$phone_no = $_REQUEST['phone_no'];
 $first_name = $_REQUEST['first_name'] ;
-
-/*just let me do something, don't toggle the windows or anything   okay*/
 $arrayc = array();
 #if(isset($_POST["submit"]))
 #{
 	if(!empty($_POST["checkbox"]))
 	foreach ($_POST["checkbox"] as $checkbox) {
 		# code...
-		$arrayc[]=$checkbox;
+		$arrayc[]= $checkbox;
 	}
 #}
 $v = implode(',', $arrayc);
 #echo $v;
 #$checkbox = $_REQUEST['checkbox'];
-$phone_no = $_REQUEST['phone_no'];
+
+$subject = $_REQUEST['subject'];
 
 $msg = 
 "First Name: " . $first_name . "\r\n" . 
+"Subject: " . $subject . "\r\n" .
 "Email: " . $email_address . "\r\n" . 
+"Option Selected: " . $v . "\r\n". 
 "Phone No: " . $phone_no . "\r\n" .
-"Option Selected: " .$v. "\r\n". 
 "Comments: " . $comments ;
 
 
