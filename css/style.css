@@ -443,82 +443,6 @@ h1, h2, h3, h4, h5, h6 {
 #testimonials .owl-dot.active {
   background-color: #1F87DA;
 }
-
-/* Team Section
---------------------------------*/
-#team {
-  background: #fff;
-  padding: 60px 0;
-}
-
-#team .member {
-  text-align: center;
-  margin-bottom: 20px;
-  background: #000;
-  position: relative;
-}
-
-#team .member .member-info {
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: 0.2s;
-}
-
-#team .member .member-info-content {
-  margin-top: -50px;
-  transition: margin 0.2s;
-}
-
-#team .member:hover .member-info {
-  background: rgba(0, 0, 0, 0.7);
-  opacity: 1;
-  transition: 0.4s;
-}
-
-#team .member:hover .member-info-content {
-  margin-top: 0;
-  transition: margin 0.4s;
-}
-
-#team .member h4 {
-  font-weight: 700;
-  margin-bottom: 2px;
-  font-size: 18px;
-  color: #fff;
-}
-
-#team .member span {
-  font-style: italic;
-  display: block;
-  font-size: 13px;
-  color: #fff;
-}
-
-#team .member .social {
-  margin-top: 15px;
-}
-
-#team .member .social a {
-  transition: none;
-  color: #fff;
-}
-
-#team .member .social a:hover {
-  color: #1F87DA;
-}
-
-#team .member .social i {
-  font-size: 18px;
-  margin: 0 2px;
-}
-
 /* Contact Section
 --------------------------------*/
 #contact {
@@ -560,6 +484,133 @@ h1, h2, h3, h4, h5, h6 {
 
 #contact .contact-address, #contact .contact-phone, #contact .contact-email {
   margin-bottom: 20px;
+}
+
+
+/*------------------------*/
+
+input[type=text], input[type=email], input[type=phone] {
+  width: 45%;
+  padding: 15px 22px;
+  margin: 10px 5px;
+  box-sizing: border-box; 
+  border-style: solid;
+
+     }
+    textarea{
+       padding: 15px 22px;
+      margin: 10px 5px;
+      box-sizing: border-box;
+      border-radius: 5px; 
+      border-style: initial;
+        }
+
+        .container1 {
+          display: block;
+          position: relative;
+          padding-left: 35px;
+          margin-bottom: 12px;
+          cursor: pointer;
+          font-size: 15px;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+        
+        /* Hide the browser's default checkbox */
+        .container1 input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+        
+        /* Create a custom checkbox */
+        .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 20px;
+          width: 20px;
+          background-color: #eee;
+        }
+        
+        /* On mouse-over, add a grey background color */
+        .container1:hover input ~ .checkmark {
+          background-color: #ccc;
+        }
+        
+        /* When the checkbox is checked, add a blue background */
+        .container1 input:checked ~ .checkmark {
+          background-color: #2196F3;
+        }
+        
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+        
+        /* Show the checkmark when checked */
+        .container1 input:checked ~ .checkmark:after {
+          display: block;
+        }
+        
+        /* Style the checkmark/indicator */
+        .container1 .checkmark:after {
+          left: 9px;
+          top: 5px;
+          width: 5px;
+          height: 10px;
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+
+
+        .button {
+display: inline-block;
+border-radius: 4px;
+background-color: #1F87DA;
+border: none;
+color: #FFFFFF;
+text-align: center;
+font-size: 15px;
+padding: 10px;
+width: 150px;
+transition: all 0.5s;
+cursor: pointer;
+margin: 5px;
+}
+
+.button span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+
+.button span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+
+.button:hover span {
+padding-right: 15px;
+}
+
+.button:hover span:after {
+opacity: 1;
+right: 0;
 }
 
 @media (min-width: 768px) {
@@ -614,27 +665,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   color: #eee;
 }
-
-#footer .footer-top .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #333;
-  color: #eee;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
-
-#footer .footer-top .social-links a:hover {
-  background: #1F87DA;
-  color: #fff;
-}
-
 #footer .footer-top h4 {
   font-size: 14px;
   font-weight: bold;
@@ -701,32 +731,6 @@ h1, h2, h3, h4, h5, h6 {
 #footer .footer-top .footer-contact p {
   line-height: 26px;
 }
-
-#footer .footer-top .footer-newsletter {
-  margin-bottom: 30px;
-}
-
-#footer .footer-top .footer-newsletter input[type="email"] {
-  border: 0;
-  padding: 6px 8px;
-  width: 65%;
-}
-
-#footer .footer-top .footer-newsletter input[type="submit"] {
-  background: #1F87DA;
-  border: 0;
-  width: 35%;
-  padding: 6px 0;
-  text-align: center;
-  color: #fff;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-#footer .footer-top .footer-newsletter input[type="submit"]:hover {
-  background: #13a456;
-}
-
 #footer .copyright {
   text-align: center;
   padding-top: 30px;
