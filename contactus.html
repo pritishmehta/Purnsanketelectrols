@@ -99,7 +99,7 @@
         <input type="text" name="subject" placeholder="Subject"  required >
         <input type="email" name="email_address" placeholder="Email ID"  required>
         <input type="Phone" name="phone_no" placeholder="Phone No."  required><br></div>
-        <div style="padding-left: 15px;">
+        <div style="padding-left: 15px; color: grey;">
         <label class="container1">Thermocouple & RTD sensors
           <input type="checkbox" name="checkbox[]" value="Thermocouple & RTD sensors">
           <span class="checkmark"></span>
@@ -132,7 +132,6 @@
         </form>
                 </div>
 
-
 <div style="padding: 2em">
 
         <div class="row contact-info">
@@ -141,9 +140,89 @@
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
               <h3>Address</h3>
-              <address><a href="https://www.google.com/maps/place/Tapo+Commercial+Centre,+Ram+Mandir+Rd,+Mahatma+Jyotiba+Phule+Nagar,+Jogeshwari+West,+Mumbai,+Maharashtra+400104/@19.1519269,72.8443483,17z/data=!3m1!4b1!4m5!3m4!1s0x3be7b64a1035f6f7:0xca2d9e8bb589f624!8m2!3d19.1519269!4d72.846537"># 311, Tapo Commercial Complex,<br>
-                        Ram Mandir Road, Goregaon (West),<br>
-                        Mumbai - 400104</a></address>
+                 <style>
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  position: right;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn" style="background-color: white; border: 0;">#211,Veena Dalvai Industrial Estate,<br> Oshiwara, Jogeshwari (West)<br> Mumbai - 400102 <br></button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+   <div class="mapouter"><div class="gmap_canvas"><iframe width="953" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=purnsanket&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/">divi builder examples</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:953px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:953px;}</style></div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
             </div>
           </div>
 
